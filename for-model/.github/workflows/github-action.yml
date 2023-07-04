@@ -2,7 +2,7 @@ forEach: Model
 fileName: github-action.yml
 ---
 name: github-action
-run-name: $&#123;&#123; github.actor &#125;&#125; is out building GitHub Actions
+run-name: "{{" github.actor "}}" is out building GitHub Actions
 
 on:
   push:
@@ -27,8 +27,8 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: $&#123;&#123; github.repository_owner &#125;&#125;
-          password: &#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;
+          username: $"{{" github.repository_owner "}}"
+          password: "{{" secrets.GITHUB_TOKEN "}}"
       
       - name: Build Maven Projects
         run: |
@@ -44,8 +44,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/$&#123;&#123; github.repository_owner &#125;&#125;/{{../options.package}}/{{name}}:latest
-            ghcr.io/$&#123;&#123; github.repository_owner &#125;&#125;/{{../options.package}}/{{name}}:1.0.0
+            ghcr.io/$"{{" github.repository_owner "}}"/{{../options.package}}/{{name}}:latest
+            ghcr.io/$"{{" github.repository_owner "}}"/{{../options.package}}/{{name}}:1.0.0
             
       {{/boundedContexts}}
      
