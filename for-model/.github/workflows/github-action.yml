@@ -1,5 +1,6 @@
+forEach: Model
 fileName: github-action.yml
-path: /.github/workflows
+path: for-model/.github/workflows
 ---
 # README
 # Check Setting of your repository 
