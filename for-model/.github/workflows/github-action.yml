@@ -45,7 +45,7 @@ jobs:
           push: true
           tags: |
             ghcr.io/$\{{ github.repository_owner }}/{{../options.package}}/{{name}}:latest
-            ghcr.io/$\{{ github.repository_owner }}/{{../options.package}}/{{name}}:1.0.0
+            ghcr.io/$\{{ github.repository_owner }}/{{../options.package}}/{{name}}:$\{{ github.ref_name }}
             
       {{/boundedContexts}}
      
