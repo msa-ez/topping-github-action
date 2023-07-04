@@ -44,11 +44,11 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/$\{{ github.repository_owner }}/{{convertName ../projectName}}/{{convertName name}}:latest
-            ghcr.io/$\{{ github.repository_owner }}/{{convertName ../projectName}}/{{convertName name}}:$\{{ github.ref_name }}
+            ghcr.io/$\{{ github.repository_owner }}/{{url ../projectName}}/{{url name}}:latest
+            ghcr.io/$\{{ github.repository_owner }}/{{url ../projectName}}/{{url name}}:$\{{ github.ref_name }}
             
       {{/boundedContexts}}
       
-window.$HandleBars.registerHelper("convertName", function(str){
+window.$HandleBars.registerHelper("url", function(str){
       return  str ? str.toLowerCase().replaceAll(" ", "-") : str;
 });
