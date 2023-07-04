@@ -44,11 +44,11 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/$\{{ github.repository_owner }}/{{../options.package}}/{{imgName name}}:latest
-            ghcr.io/$\{{ github.repository_owner }}/{{../options.package}}/{{imgName name}}:$\{{ github.ref_name }}
+            ghcr.io/$\{{ github.repository_owner }}/{{convertName ../projectName}}/{{convertName name}}:latest
+            ghcr.io/$\{{ github.repository_owner }}/{{convertName ../projectName}}/{{convertName name}}:$\{{ github.ref_name }}
             
       {{/boundedContexts}}
       
-window.$HandleBars.registerHelper("imgName", function(str){
+window.$HandleBars.registerHelper("convertName", function(str){
       return  str ? str.toLowerCase().replaceAll(" ", "-") : str;
 });
