@@ -1,5 +1,5 @@
 forEach: Model
 fileName: docker-compose.yml
-path: for-model/kafka
+path: for-model/infra
 ifDuplicated: merge
 ---
