@@ -1,11 +1,6 @@
 forEach: Model
 fileName: github-action.yml
 ---
-# README
-# Check Setting of your repository 
-# Setting > Actions > Genernal > Workflow permissions 
-# Select of "Read and write Permissions."
-
 name: github-action
 run-name: $\{\{ github.actor \}\} is out building GitHub Actions
 
