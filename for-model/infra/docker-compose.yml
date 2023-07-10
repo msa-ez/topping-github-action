@@ -3,20 +3,14 @@ fileName: docker-compose.yml
 path: for-model/infra
 ifDuplicated: merge
 ---
+{{#boundedContextsOfPBC}}
 services:
-  microservice1:
-    image: microservice1-image:tag
+  {{name}}:
+    image: ghcr.io/{{scm.org}}/storeapp/{{scm.repo}}:{{scm.tag}}
     ports:
       - 8080:8080
     networks:
       - mynetwork
     volumes:
-      - ./path/to/microservice1/config:/app/config
-  microservice2:
-    image: microservice2-image:tag
-    ports:
-      - 8081:8080
-    networks:
-      - mynetwork
-    volumes:
-      - ./path/to/microservice2/config:/app/config
+      - ./path/to/{{name}}/config:/app/config
+{{/boundedContextsOfPBC}}
