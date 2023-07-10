@@ -6,11 +6,9 @@ ifDuplicated: merge
 services:
 {{#boundedContextsOfPBC}}
   {{toLowerCase name}}:
-    image: ghcr.io/{{scm.org}}/{{scm.repo}}/{{name}}:{{scm.tag}}
+    image: ghcr.io/{{scm.org}}/{{scm.repo}}/{{toLowerCase name}}:{{scm.tag}}
     ports:
       - 8080:8080
-    networks:
-      - mynetwork
     volumes:
       - ./path/to/{{toLowerCase name}}/config:/app/config
 {{/boundedContextsOfPBC}}
