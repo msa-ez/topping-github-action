@@ -3,8 +3,8 @@ fileName: docker-compose.yml
 path: for-model/infra
 ifDuplicated: merge
 ---
-{{#boundedContextsOfPBC}}
 services:
+{{#boundedContextsOfPBC}}
   {{name}}:
     image: ghcr.io/{{scm.org}}/storeapp/{{scm.repo}}:{{scm.tag}}
     ports:
