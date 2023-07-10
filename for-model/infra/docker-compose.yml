@@ -5,12 +5,12 @@ ifDuplicated: merge
 ---
 services:
 {{#boundedContextsOfPBC}}
-  {{name}}:
-    image: ghcr.io/{{scm.org}}/{{scm.projectName}}/{{scm.repo}}:{{scm.tag}}
+  {{toLowerCase name}}:
+    image: ghcr.io/{{scm.org}}/{{scm.repo}}/{{name}}:{{scm.tag}}
     ports:
       - 8080:8080
     networks:
       - mynetwork
     volumes:
-      - ./path/to/{{name}}/config:/app/config
+      - ./path/to/{{toLowerCase name}}/config:/app/config
 {{/boundedContextsOfPBC}}
