@@ -1,12 +1,11 @@
 forEach: Model
 fileName: docker-compose.yml
 path: for-model/infra
-ifDuplicated: merge
 ---
 services:
 {{#boundedContextsOfPBC}}
   {{name}}:
-    image: ghcr.io/{{scm.org}}/storeapp/{{scm.repo}}:{{scm.tag}}
+    image: ghcr.io/{{scm.org}}/{{scm.projectName}}/{{scm.repo}}:{{scm.tag}}
     ports:
       - 8080:8080
     networks:
