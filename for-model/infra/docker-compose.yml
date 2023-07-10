@@ -6,7 +6,7 @@ ifDuplicated: merge
 services:
 {{#boundedContextsOfPBC}}
   {{toLowerCase name}}:
-    image: ghcr.io/{{scm.org}}/{{toLowerCase projectName}}/{{scm.repo}}:{{scm.tag}}
+    image: ghcr.io/{{scm.org}}/{{toLowerCase scm.projectName}}/{{scm.repo}}:{{scm.tag}}
     ports:
       - 8080:8080
     volumes:
