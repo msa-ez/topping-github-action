@@ -1,6 +1,7 @@
 forEach: Model
 fileName: docker-compose.yml
 path: for-model/infra
+ifDuplicated: merge
 ---
 services:
 {{#boundedContextsOfPBC}}
