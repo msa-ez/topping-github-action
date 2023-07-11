@@ -1,3 +1,5 @@
+priority: 1
+---
 FROM openjdk:15-jdk-slim
 COPY target/*SNAPSHOT.jar app.jar
 EXPOSE 8080
