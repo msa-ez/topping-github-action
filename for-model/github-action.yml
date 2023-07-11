@@ -1,5 +1,5 @@
 forEach: Model
-fileName: /.github/workflows/github-action.yml
+fileName: .github/workflows/github-action.yml
 ---
 name: github-action
 run-name: $\{{ github.actor }} is out building GitHub Actions
