@@ -4,11 +4,11 @@ path: for-model/infra
 ifDuplicated: merge
 ---
 services:
-{{#boundedContextsOfPBC}}
+{{#boundedContexts}}
   {{toLowerCase name}}:
     image: ghcr.io/{{scm.org}}/{{scm.repo}}/{{toLowerCase name}}:{{scm.tag}}
     ports:
       - 8080:8080
     volumes:
       - ./path/to/{{toLowerCase name}}/config:/app/config
-{{/boundedContextsOfPBC}}
+{{/boundedContexts}}
