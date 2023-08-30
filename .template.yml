@@ -2,3 +2,4 @@ name: Github action
 rating: 5
 imageUrl: https://github.com/msa-ez/template-spring-boot-3/assets/123912988/d3624f4d-32f3-4f98-862d-70826205d1ca
 templateName: github-action
+description: Github action description
