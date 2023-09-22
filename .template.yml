@@ -4,4 +4,5 @@ imageUrl: https://github.com/msa-ez/template-axon2/assets/130956306/d8ff35bf-336
 templateName: github-action
 description: As a CI/CD service, GitHub Actions automates tasks such as testing, building, and deploying based on code changes within a GitHub repository.
 depends:
-tags: Frontend
+tags:
+  - Frontend
