@@ -59,6 +59,19 @@ jobs:
             
       {{/boundedContexts}}
 
+      - name: Update Kubernetes manifests
+        run: |
+          {{#boundedContexts}}
+          sed -i '/name: "{{convert name}}"/{N;s|image: "ghcr.io/[^"]*"|image: "ghcr.io/$\{{ env.REPO_NAME }}/{{convert name}}:$\{{ env.REF_NAME }}"|}' ./kubernetes/template/template.yml
+          {{/boundedContexts}}
+          git config --global user.email $\{{ github.actor }}@users.noreply.github.com
+          git config --global user.name "$\{{ github.actor }}"
+          git add ./kubernetes/template/template.yml
+          git commit -m "Update image tag to $\{{ env.REF_NAME }}"
+          git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: $\{{ secrets.GITHUB_TOKEN }}
+
 <function>
 window.$HandleBars.registerHelper("convert", function(str){
       return  str ? str.toLowerCase().replaceAll(" ", "-") : str;
