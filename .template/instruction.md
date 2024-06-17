@@ -37,6 +37,6 @@ github/workflows -> .github/workflows
 3) Select of "Read and write Permissions."
 <img width="903" alt="setting3" src="https://github.com/sooheon45/topping-github-action/assets/54785805/fe562497-e860-4d8b-9d5a-f189ef3dce8d">
 
-#### 3. action을 실행하기 위해 v0.x로 릴리즈를 생성한다.
+#### 3. to execute the action, create a release with version v0.x.
 <img width="845" alt="image" src="https://github.com/msa-ez/topping-github-action/assets/123912988/2cecbec8-212e-4804-a998-b9203d8218d0">
 
