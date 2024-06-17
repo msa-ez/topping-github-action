@@ -19,3 +19,24 @@
 #### Real-time Logging: Live logs can be viewed during workflow execution, making debugging easier.
 
 #### Cost-effective: GitHub Actions is free for public repositories and also offers a generous amount of free minutes for private repositories.
+
+### How to run
+
+#### 1. change the folder name 
+```
+github/workflows -> .github/workflows
+```
+#### 2. change the configuration of git-action.
+
+1) Check Setting of your repository 
+<img width="931" alt="setting1" src="https://github.com/sooheon45/topping-github-action/assets/54785805/4007c96b-1244-43ad-bf5c-042a114a0ba1">
+
+2) Setting > Actions > Genernal > Workflow permissions 
+<img width="333" alt="setting2" src="https://github.com/sooheon45/topping-github-action/assets/54785805/059d6d61-ee9e-41ec-8e08-1021031a18fe">
+
+3) Select of "Read and write Permissions."
+<img width="903" alt="setting3" src="https://github.com/sooheon45/topping-github-action/assets/54785805/fe562497-e860-4d8b-9d5a-f189ef3dce8d">
+
+#### 3. action을 실행하기 위해 v0.x로 릴리즈를 생성한다.
+<img width="845" alt="image" src="https://github.com/msa-ez/topping-github-action/assets/123912988/2cecbec8-212e-4804-a998-b9203d8218d0">
+
